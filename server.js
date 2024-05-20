@@ -12,7 +12,7 @@ import cors from 'cors';
 const app = express();
 
 const corsOptions = {
-	origin: ['http://localhost:5173']
+	origin: ['http://localhost:5173','https://basic-ovrridr-client.vercel.app/']
 };
 
 // connect to database
