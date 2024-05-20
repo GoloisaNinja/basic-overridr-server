@@ -11,15 +11,15 @@ import cors from 'cors';
 // create server
 const app = express();
 
-const corsOptions = {
-	origin: ['http://localhost:5173','https://basic-ovrridr-client.vercel.app/']
-};
+// const corsOptions = {
+// 	origin: ['http://localhost:5173','https://basic-ovrridr-client.vercel.app/']
+// };
 
 // connect to database
 connectDB();
 // init middleware
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.post('/login', async (req, res) => {
     const { dbCommand, password } = req.body;
